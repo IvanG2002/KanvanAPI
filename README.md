@@ -1,73 +1,56 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Manual Técnico de la API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Introducción
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Esta API proporciona endpoints para gestionar usuarios y tareas. Utiliza NestJS como framework para construir aplicaciones web escalables y mantenibles en Node.js.
 
-## Description
+## Requisitos Previos
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Asegúrate de tener instalado Node.js en tu sistema antes de comenzar. También necesitarás tener una base de datos compatible con Prisma, ya que esta API utiliza Prisma como ORM.
 
-## Installation
+## Instalación
 
-```bash
-$ npm install
+1. Clona este repositorio en tu máquina local.
+2. Abre una terminal en la carpeta del proyecto.
+3. Ejecuta el siguiente comando para instalar las dependencias del proyecto:
+4. Configura tu base de datos en el archivo `.env` proporcionado.
+5. Ejecuta el siguiente comando para iniciar el servidor:
+```JavaScript
+npm start
 ```
+## Endpoints
 
-## Running the app
+### Users
 
-```bash
-# development
-$ npm run start
+- **POST /users**: Crea un nuevo usuario.
+- **GET /users**: Obtiene todos los usuarios.
+- **GET /users/:id**: Obtiene un usuario por su ID.
+- **PATCH /users/:id**: Actualiza un usuario existente.
+- **DELETE /users/:id**: Elimina un usuario existente.
 
-# watch mode
-$ npm run start:dev
+### Auth
 
-# production mode
-$ npm run start:prod
-```
+- **POST /auth/login**: Inicia sesión de usuario.
+- **POST /auth/register**: Registra un nuevo usuario.
 
-## Test
+### Tasks
 
-```bash
-# unit tests
-$ npm run test
+- **POST /tasks**: Crea una nueva tarea.
+- **GET /tasks**: Obtiene todas las tareas.
+- **GET /tasks/:id**: Obtiene una tarea por su ID.
+- **PATCH /tasks/:id**: Actualiza una tarea existente.
+- **DELETE /tasks/:id**: Elimina una tarea existente.
 
-# e2e tests
-$ npm run test:e2e
+## Seguridad
 
-# test coverage
-$ npm run test:cov
-```
+Esta API utiliza hashing de contraseñas utilizando bcrypt para almacenar contraseñas de usuarios de forma segura. También se manejan adecuadamente los errores de autenticación y autorización.
 
-## Support
+## Contribución
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Si deseas contribuir a este proyecto, ¡te damos la bienvenida! Puedes abrir problemas para informar sobre errores o sugerir nuevas características. También puedes enviar solicitudes de extracción con mejoras o correcciones de errores.
 
-## Stay in touch
+## Licencia
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Este proyecto está bajo la Licencia MIT. Para obtener más información, consulta el archivo `LICENSE`.
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+Este es un resumen de alto nivel del funcionamiento y los aspectos importantes de la API. Asegúrate de revisar el código fuente para obtener detalles más específicos sobre la implementación.
