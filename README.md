@@ -19,7 +19,7 @@ npm install
 5. Configura tu base de datos en el archivo `.env` proporcionado.
 6. Ejecuta el siguiente comando para iniciar el servidor:
 ```JavaScript
-npm start
+npm run dev
 ```
 ## Endpoints
 
