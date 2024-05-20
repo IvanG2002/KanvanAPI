@@ -13,8 +13,11 @@ Asegúrate de tener instalado Node.js en tu sistema antes de comenzar. También 
 1. Clona este repositorio en tu máquina local.
 2. Abre una terminal en la carpeta del proyecto.
 3. Ejecuta el siguiente comando para instalar las dependencias del proyecto:
-4. Configura tu base de datos en el archivo `.env` proporcionado.
-5. Ejecuta el siguiente comando para iniciar el servidor:
+```JavaScript
+npm install
+```
+5. Configura tu base de datos en el archivo `.env` proporcionado.
+6. Ejecuta el siguiente comando para iniciar el servidor:
 ```JavaScript
 npm start
 ```
