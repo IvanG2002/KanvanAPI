@@ -25,7 +25,7 @@ export class TasksController {
   async findOne(@Param('id') id: string): Promise<Task> {
     const task = await this.prismaService.task.findUnique({
       where: {
-        id: +id
+        id: id
       },
     });
     if (!task) {
@@ -38,7 +38,7 @@ export class TasksController {
   async update(@Param('id') id: string, @Body() updateTask: Task): Promise<Task> {
     return await this.prismaService.task.update({
       where: {
-        id: +id
+        id: id
       },
       data: updateTask
     })
@@ -48,7 +48,7 @@ export class TasksController {
   async remove(@Param('id') id: string): Promise<Task> {
     return await this.prismaService.task.delete({
       where: {
-        id: +id
+        id: id
       }
     })
   }
